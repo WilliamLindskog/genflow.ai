@@ -37,4 +37,4 @@ vector_store = FAISS.from_documents(
     texts,
     embeddings,
 )
-vector_store.save('./etc/vector_store/db_faiss')
+vector_store.save_local('./etc/vector_store/db_faiss')
