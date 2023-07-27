@@ -9,7 +9,7 @@ from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 
 # Load the data
 loader = DirectoryLoader(
-    './data/',
+    './data/example_pdfs/',
     glob="*.pdf",
     loader_cls=PyPDFLoader,
 )
@@ -27,7 +27,9 @@ texts = splitter.split_documents(doc)
 # Load embeddings model
 embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
-    model_kwargs={'device': 'cpu'},
+    model_kwargs={
+        'device': 'cpu'
+    },
 )
 
 # Build and persist FAISS vector store
