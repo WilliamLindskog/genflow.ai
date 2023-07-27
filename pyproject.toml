@@ -9,6 +9,7 @@ packages = [{include = "genflow"}]
 
 [tool.poetry.dependencies]
 python = "3.9.5"
+langchain = "^0.0.245"
 
 
 [build-system]
