@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "genflow-ai"
+version = "0.1.0"
+description = "requirements for genflow.ai"
+authors = ["William Lindskog"]
+license = "Apache-2.0 license"
+readme = "README.md"
+packages = [{include = "genflow"}]
+
+[tool.poetry.dependencies]
+python = "3.9.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
